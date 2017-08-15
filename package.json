@@ -1,0 +1,27 @@
+{
+  "name": "rpsfrontend",
+  "version": "0.1.0",
+  "description": "a frontend for js coding nights",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Simmarith/rpsFrontEnd.git"
+  },
+  "author": "Adrian Menzel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Simmarith/rpsFrontEnd/issues"
+  },
+  "homepage": "https://github.com/Simmarith/rpsFrontEnd#readme",
+  "dependencies": {
+    "babel-loader": "^7.1.1",
+    "path": "^0.12.7",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "webpack": "^3.5.4"
+  }
+}
