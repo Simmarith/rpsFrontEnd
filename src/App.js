@@ -41,7 +41,7 @@ export default class App extends Component {
         newState.leaderboard = leaderboard;
         let userFromLeaderboard = this.getUserByUsername(this.state.username);
         if (userFromLeaderboard !== null) {
-            if (userFromLeaderboard.rounds != this.state.rounds) {
+            if (userFromLeaderboard.rounds != this.state.rounds && userFromLeaderboard.kills != this.state.score) {
                 newState.currentChoice = '';
                 newState.rounds = userFromLeaderboard.rounds;
                 newState.score = userFromLeaderboard.kills;
@@ -86,7 +86,9 @@ export default class App extends Component {
             {'Your current choice: ' + this.state.currentChoice}
             <br />
             <input onChange={(event) => { this.changeUsername(event.target.value) }} />
-            <Button onClick={() => { this.fetchLeaderboard() }} >TEST LEADERBOARD</Button>
+            <Button onClick={() => { this.fetchLeaderboard() }} >FETCH LEADERBOARD</Button>
+            <br />
+            <br />
             <Button onClick={() => { this.castChoice('rock') }} >ROCK</Button>
             <Button onClick={() => { this.castChoice('paper') }} >PAPER</Button>
             <Button onClick={() => { this.castChoice('scissors') }} >SCISSORS</Button>

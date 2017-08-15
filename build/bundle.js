@@ -12354,7 +12354,7 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
         newState.leaderboard = leaderboard;
         let userFromLeaderboard = this.getUserByUsername(this.state.username);
         if (userFromLeaderboard !== null) {
-            if (userFromLeaderboard.rounds != this.state.rounds) {
+            if (userFromLeaderboard.rounds != this.state.rounds && userFromLeaderboard.kills != this.state.score) {
                 newState.currentChoice = '';
                 newState.rounds = userFromLeaderboard.rounds;
                 newState.score = userFromLeaderboard.kills;
@@ -12412,8 +12412,10 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                 { onClick: () => {
                         this.fetchLeaderboard();
                     } },
-                'TEST LEADERBOARD'
+                'FETCH LEADERBOARD'
             ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 __WEBPACK_IMPORTED_MODULE_3_react_bootstrap_lib_Button___default.a,
                 { onClick: () => {
