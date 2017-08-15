@@ -12354,7 +12354,7 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
         newState.leaderboard = leaderboard;
         let userFromLeaderboard = this.getUserByUsername(this.state.username);
         if (userFromLeaderboard !== null) {
-            if (userFromLeaderboard.rounds != this.state.rounds && userFromLeaderboard.kills != this.state.score) {
+            if (userFromLeaderboard.rounds != this.state.rounds || userFromLeaderboard.kills != this.state.score) {
                 newState.currentChoice = '';
                 newState.rounds = userFromLeaderboard.rounds;
                 newState.score = userFromLeaderboard.kills;
